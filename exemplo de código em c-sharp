@@ -1,0 +1,13 @@
+Public class automovel{
+//abaixo as variaveis
+  string modelo;//string porque o modelo pode ser "gol","uno" ou "opala"
+  string fabricante;//"fiat","ferrari","audi","honda"
+  int ano;//tem que ser representados por numeros inteiros: 1999,2000
+  //abaixo funções ou metodos
+  // função acelerar
+    public Acelerar(double velocidadeDesejada){
+    }
+  //função freiar
+    public Freiar(){
+    }
+}    
