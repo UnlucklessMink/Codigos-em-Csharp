@@ -1,0 +1,139 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace Calculado
+{
+    class Program
+    {
+
+
+        enum menu { soma = 1, subtracao, multipicacao, divisao, raiz, potencia, sair }
+        static void Main(string[] args)
+        {
+            bool sair = false;
+            while (!sair)
+            {
+                Console.WriteLine("Seja bem vindo a calculadora, selecione uma das opções:");
+                Console.WriteLine("1-soma\n2-subtração\n3-multiplicaçao\n4-divisao\n5-raiz\n6-potencia\n7-sair");
+
+                menu opcao = (menu)int.Parse(Console.ReadLine());
+
+                Console.WriteLine(opcao);
+
+                Console.Clear();
+
+                switch (opcao)
+                {
+                    case menu.sair:
+                        sair = true;
+                        break;
+
+                    case menu.soma:
+                        soma();
+                        break;
+                    case menu.subtracao:
+                        sub();
+                        break;
+                    case menu.multipicacao:
+                        multi();
+                        break;
+                    case menu.divisao:
+                        div();
+                        break;
+                    case menu.raiz:
+                        raiz();
+                        break;
+                    case menu.potencia:
+                        pot();
+                        break;
+
+
+                }
+            }
+
+        }
+        static void soma()
+        {
+            Console.WriteLine("soma de dois numeros:");
+            Console.WriteLine("digite o primeiro numero:");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("digite o segundo numero:");
+            int num2 = int.Parse(Console.ReadLine());
+            int resultado = num1 + num2;
+            Console.WriteLine($"o resultado é: {resultado}");
+            Console.WriteLine("aperte ENTER para voltar ao menu");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        static void sub()
+        {
+            Console.WriteLine("subtração de dois numeros:");
+            Console.WriteLine("digite o primeiro numero:");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("digite o segundo numero:");
+            int num2 = int.Parse(Console.ReadLine());
+            int resultado = num1 - num2;
+            Console.WriteLine($"o resultado é: {resultado}");
+            Console.WriteLine("aperte ENTER para voltar ao menu");
+            Console.ReadLine();
+            Console.Clear();
+
+        }
+        static void multi()
+        {
+            Console.WriteLine("multiplicação de dois numeros:");
+            Console.WriteLine("digite o primeiro numero:");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("digite o segundo numero:");
+            int num2 = int.Parse(Console.ReadLine());
+            int resultado = num1 * num2;
+            Console.WriteLine($"o resultado é: {resultado}");
+            Console.WriteLine("aperte ENTER para voltar ao menu");
+            Console.ReadLine();
+            Console.Clear();
+        }
+       
+        static void div()
+        {
+            Console.WriteLine("divisão de dois numeros:");
+            Console.WriteLine("digite o primeiro numero:");
+            float num1 = float.Parse(Console.ReadLine());
+            Console.WriteLine("digite o segundo numero:");
+            float num2 =  float.Parse(Console.ReadLine());
+            float resultado = num1 / num2;
+            Console.WriteLine($"o resultado é: {resultado}");
+            Console.WriteLine("aperte ENTER para voltar ao menu");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        static void raiz()
+        {
+            Console.WriteLine("raiz de um numero");
+            Console.WriteLine("digite o numero:");
+            float num1 = float.Parse(Console.ReadLine());
+            float resultado = (float)Math.Sqrt(num1);
+            Console.WriteLine($"o resultado é: {resultado}");
+            Console.WriteLine("aperte ENTER para voltar ao menu");
+            Console.ReadLine();
+            Console.Clear();
+        }
+        static void pot()
+        {
+            Console.WriteLine("potencia de um numero:");
+            Console.WriteLine("digite primeiro a base:");
+            float Basenum = float.Parse(Console.ReadLine());
+            Console.WriteLine("digite segundo a potencia:");
+            float expo = float.Parse(Console.ReadLine());
+            float resultado = (float)Math.Pow(Basenum, expo);
+            Console.WriteLine($"o resultado é: {resultado}");
+            Console.WriteLine("aperte ENTER para voltar ao menu");
+            Console.ReadLine();
+            Console.Clear();
+        }
+    }
+}
+
